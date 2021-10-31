@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- my css -->
+    <link rel="stylesheet" href="#">
+    <title>Validation</title>
+    <style>
+      body
+      {
+        margin-top: 20px;
+        background-image: linear-gradient(rgb(0, 0, 0),rgb(10, 6, 6),grey)
+        
+      }
+    	.container
+      {
+        width: 30%;
+      }
+      .font
+      {
+        font-family:'Times New Roman', Times, serif;
+        color: cornsilk ;
+        text-align: center;
+        height: 60px;
+        background-color: darkmagenta;
+      }
+    </style>
+  </head>
+  <body>
+     <!-- shopping form  -->
+      <h1 class="font"> Resgistration Form</h1>
+
+    <div class="container">
+    <form>
+      <!-- username  -->
+      <div class="col-md-4">
+        <label for="validationServerUsername" class="form-label">Username</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend3">@</span>
+          <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+      <!-- First name & Last name  -->
+      <div class="col-md-4">
+        <label for="validationServer01" class="form-label">First name</label>
+        <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Mark" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationServer02" class="form-label">Last name</label>
+        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Otto" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <!-- email -->
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <!-- password -->
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">Password</label>
+          </div>
+          <div class="col-auto">
+            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
+            <span id="passwordHelpInline" class="form-text">
+              Must be 8-20 characters long.
+            </span>
+          </div>
+          <!-- remember me  -->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+            <label class="form-check-label" for="autoSizingCheck2">
+              Remember me
+            
+          </div>
+          <!-- Confirm identity -->
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+          </div>
+          <!-- Multiple files input -->
+          <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+            <input class="form-control" type="file" id="formFileMultiple" multiple>
+          </div>
+          <!-- color picker -->
+          <label for="exampleColorInput" class="form-label">Color picker</label>
+        <input type="color" class="form-control form-control-color" id="exampleColorInput" 
+        value="#563d7c" title="Choose your color"> 
+        </div>
+        <!-- datalist -->
+        <label for="exampleDataList" class="form-label">Datalist example</label>
+       <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+        <datalist id="datalistOptions">
+        <option value="San Francisco">
+       <option value="New York">
+       <option value="Seattle">
+       <option value="Los Angeles">
+       <option value="Chicago">
+        </datalist>
+        <!-- Address  -->
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <!-- city  -->
+        <div class="col-md-6">
+          <label for="validationServer03" class="form-label">City</label>
+          <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+          <div id="validationServer03Feedback" class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <!-- state  -->
+        <div class="col-md-3">
+          <label for="validationServer04" class="form-label">State</label>
+          <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+          <div id="validationServer04Feedback" class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+        <!-- zip  -->
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">Zip</label>
+          <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+          <div id="validationServer05Feedback" class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+         <!-- radio buttons -->
+         <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+            <label class="form-check-label" for="invalidCheck3">
+              Agree to terms and conditions
+            </label>
+            <div id="invalidCheck3Feedback" class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <!-- select -->
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <!-- steps  -->
+        <label for="customRange3" class="form-label">Example range</label>
+         <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3"> 
+
+         <!-- file input  -->
+         <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">Upload</label>
+          <input type="file" class="form-control" id="inputGroupFile01">
+        </div>
+        <!-- text area (comments) -->
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+          <label for="floatingTextarea">Comments</label>
+        </div>
+        <!-- check -->
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+</body>
+</html>
